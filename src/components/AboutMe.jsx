@@ -3,7 +3,8 @@ import React from 'react';
 function AboutMe() {
   return (
     <section id="about-me">
-      <img src="path-to-your-photo.jpg" alt="Developer's avatar" />
+      <h2>About Me</h2>
+      <img src="../assets/me.jpg" alt="Developer's avatar" />
       <p>
         Hi, I'm Izaac Ramirez, a passionate software developer. I specialize in
         full-stack development and enjoy crafting efficient and beautiful web
