@@ -1,15 +1,23 @@
 import React from 'react';
 
-function Header() {
+function Header({ setCurrentSection }) {
   return (
     <header>
       <h1>Izaac Ramirez</h1>
       <nav>
         <ul>
-          <li><a href="#about-me" className="nav-link">About Me</a></li>
-          <li><a href="#projects" className="nav-link">Portfolio</a></li>
-          <li><a href="#contact" className="nav-link">Contact</a></li>
-          <li><a href="#resume" className="nav-link">Resume</a></li>
+          <li>
+            <button onClick={() => setCurrentSection('about-me')}>About Me</button>
+          </li>
+          <li>
+            <button onClick={() => setCurrentSection('projects')}>Portfolio</button>
+          </li>
+          <li>
+            <button onClick={() => setCurrentSection('contact')}>Contact</button>
+          </li>
+          <li>
+            <button onClick={() => setCurrentSection('resume')}>Resume</button>
+          </li>
         </ul>
       </nav>
     </header>

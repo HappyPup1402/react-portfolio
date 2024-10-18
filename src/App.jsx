@@ -7,17 +7,27 @@ import Resume from './components/Resume';
 import Footer from './components/Footer';
 
 function App() {
-  const [activeSection] = useState('about-me');
+  const [currentSection, setCurrentSection] = useState('about-me');
+
+  const renderSection = () => {
+    switch (currentSection) {
+      case 'about-me':
+        return <AboutMe />;
+      case 'projects':
+        return <Projects />;
+      case 'contact':
+        return <Contact />;
+      case 'resume':
+        return <Resume />;
+      default:
+        return <AboutMe />;
+    }
+  };
 
   return (
     <div>
-      <Header />
-      <main>
-        {activeSection === 'about-me' && <AboutMe />}
-        {activeSection === 'projects' && <Projects />}
-        {activeSection === 'contact' && <Contact />}
-        {activeSection === 'resume' && <Resume />}
-      </main>
+      <Header setCurrentSection={setCurrentSection} />
+      {renderSection()}
       <Footer />
     </div>
   );
