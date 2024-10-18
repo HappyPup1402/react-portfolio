@@ -19,10 +19,26 @@ function Contact() {
     setErrors({ ...errors, [fieldName]: error });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let isValid = true;
+
+    Object.keys(formData).forEach((field) => {
+      validateField(field);
+      if (errors[field]) {
+        isValid = false;
+      }
+    });
+
+    if (isValid) {
+      setFormData({ name: '', email: '', message: '' });
+    }
+  };
+
   return (
     <section id="contact">
       <h2>Contact</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Name:</label>
         <input
           type="text"
