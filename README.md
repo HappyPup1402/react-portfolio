@@ -54,7 +54,7 @@ Once the application is running, you'll be able to explore the following section
 
 ## Demo
 
-You can view the live demo of my portfolio here: 
+You can view the live demo of my portfolio here: https://module12-portfolio.netlify.app/
 
 ## Questions
 
